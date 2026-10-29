@@ -1,0 +1,29 @@
+# Dependency directories
+node_modules/
+
+# Build output
+.next/
+out/
+
+# Environment files — NEVER commit these
+.env
+.env.*
+!.env.example
+
+# IDE & Agent Customizations
+.vscode/
+.idea/
+.agents/
+Untitled-1.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts

@@ -1,0 +1,97 @@
+[
+  {
+    "patient": { "age_years": 35, "weight_kg": 70, "condition": "headache" },
+    "drug": "paracetamol",
+    "dose_value": 500,
+    "dose_unit": "mg",
+    "dose_text_raw": "500 mg",
+    "frequency_per_day": 3,
+    "frequency_text": "three times daily",
+    "note": "For tension headache. Take with water.",
+    "_demo_label": "Case 1: Clean adult — expected: no findings"
+  },
+  {
+    "patient": { "age_years": 6, "weight_kg": 18, "condition": "fever" },
+    "drug": "paracetamol",
+    "dose_value": 1500,
+    "dose_unit": "mg",
+    "dose_text_raw": "1500 mg",
+    "frequency_per_day": 4,
+    "frequency_text": "four times daily",
+    "note": "For fever. Inspired by class of pediatric dosing errors (synthetic data only).",
+    "_demo_label": "Case 2: Pediatric overdose — expected: PER_KG_EXCEEDED + DAILY_DOSE_EXCEEDED"
+  },
+  {
+    "patient": { "age_years": 45, "weight_kg": 75, "condition": "rheumatoid arthritis" },
+    "drug": "methotrexate",
+    "dose_value": 10,
+    "dose_unit": "mg",
+    "dose_text_raw": "10 mg",
+    "frequency_per_day": 1,
+    "frequency_text": "once daily",
+    "note": "For rheumatoid arthritis management.",
+    "_demo_label": "Case 3: Weekly drug as daily — expected: WEEKLY_ONLY_VIOLATION"
+  },
+  {
+    "patient": { "age_years": 30, "weight_kg": 65, "condition": "mild pain" },
+    "drug": "paracetamol",
+    "dose_value": 0.5,
+    "dose_unit": "mg",
+    "dose_text_raw": ".5 mg",
+    "frequency_per_day": 3,
+    "frequency_text": "three times daily",
+    "note": "For mild pain relief.",
+    "_demo_label": "Case 4a: Missing leading zero — expected: DECIMAL_FORMAT_RISK"
+  },
+  {
+    "patient": { "age_years": 52, "weight_kg": 80, "condition": "rheumatoid arthritis" },
+    "drug": "methotrexate",
+    "dose_value": 10,
+    "dose_unit": "mg",
+    "dose_text_raw": "10 mg",
+    "frequency_per_day": null,
+    "frequency_text": "once weekly",
+    "note": "Patient to take once weekly on Sundays. Prescribed for rheumatoid arthritis. Do not take daily.",
+    "_demo_label": "Case 5: Context mismatch (Gemma) — expected: NOTE_ENTRY_MISMATCH quoting 'once weekly on Sundays'"
+  },
+  {
+    "patient": {
+      "age_years": 28,
+      "weight_kg": 60,
+      "condition": "dental infection",
+      "allergies": ["penicillin"]
+    },
+    "drug": "amoxicillin",
+    "dose_value": 500,
+    "dose_unit": "mg",
+    "dose_text_raw": "500 mg",
+    "frequency_per_day": 3,
+    "frequency_text": "three times daily",
+    "note": "Patient has a known penicillin allergy. Prescribed for dental infection.",
+    "_demo_label": "Case 6: Allergy conflict (Gemma) — expected: ALLERGY_CONFLICT quoting 'known penicillin allergy'"
+  },
+  {
+    "patient": { "age_years": 0, "weight_kg": 3, "condition": "neonatal anticoagulation" },
+    "drug": "heparin",
+    "dose_value": 100,
+    "dose_unit": "units",
+    "dose_text_raw": "100 units",
+    "frequency_per_day": null,
+    "frequency_text": "as required",
+    "concentration": "10000 units/mL",
+    "route": "IV",
+    "note": "Neonatal IV heparin flush. Inspired by class of heparin vial mix-up errors (synthetic data only — no real patient).",
+    "_demo_label": "Case 7: Neonate heparin concentration — expected: CONCENTRATION_MISMATCH"
+  },
+  {
+    "patient": { "age_years": 8, "weight_kg": 25, "condition": "pain" },
+    "drug": "ibuprofen",
+    "dose_value": 100,
+    "dose_unit": "mg",
+    "dose_text_raw": "100 mg",
+    "frequency_per_day": 4,
+    "frequency_text": "four times daily",
+    "note": "Give only when needed for pain. Do not give on a fixed schedule.",
+    "_demo_label": "Case 8: PRN vs fixed (Gemma) — expected: NOTE_ENTRY_MISMATCH quoting 'only when needed for pain'"
+  }
+]

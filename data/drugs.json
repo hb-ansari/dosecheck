@@ -1,0 +1,53 @@
+{
+  "paracetamol": {
+    "unit": "mg",
+    "adult": { "max_single": 1000, "max_daily": 4000 },
+    "pediatric": { "max_single_per_kg": 15, "max_daily_per_kg": 75 },
+    "weekly_only": false,
+    "verified": false
+  },
+  "ibuprofen": {
+    "unit": "mg",
+    "adult": { "max_single": 800, "max_daily": 2400 },
+    "pediatric": { "max_single_per_kg": 10, "max_daily_per_kg": 40 },
+    "weekly_only": false,
+    "verified": false
+  },
+  "amoxicillin": {
+    "unit": "mg",
+    "adult": { "max_single": 1000, "max_daily": 3000 },
+    "pediatric": { "max_single_per_kg": 45, "max_daily_per_kg": 90 },
+    "weekly_only": false,
+    "cross_allergy": ["penicillin"],
+    "verified": false
+  },
+  "methotrexate": {
+    "unit": "mg",
+    "adult": { "max_single": 25, "max_daily": 25 },
+    "pediatric": { "max_single_per_kg": 0.5, "max_daily_per_kg": 0.5 },
+    "weekly_only": true,
+    "verified": false
+  },
+  "digoxin": {
+    "unit": "mcg",
+    "adult": { "max_single": 500, "max_daily": 500 },
+    "pediatric": { "max_single_per_kg": 10, "max_daily_per_kg": 10 },
+    "weekly_only": false,
+    "verified": false
+  },
+  "morphine": {
+    "unit": "mg",
+    "adult": { "max_single": 30, "max_daily": 200 },
+    "pediatric": { "max_single_per_kg": 0.2, "max_daily_per_kg": 1.2 },
+    "weekly_only": false,
+    "verified": false
+  },
+  "heparin": {
+    "unit": "units",
+    "adult": { "max_single": 10000, "max_daily": 40000 },
+    "pediatric": { "max_single_per_kg": 100, "max_daily_per_kg": 600 },
+    "weekly_only": false,
+    "expected_concentrations_units_per_ml": [10, 100, 1000, 5000, 10000],
+    "verified": false
+  }
+}
