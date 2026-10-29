@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, use } from "react";
+import { useEffect, useState, use, useCallback } from "react";
 import Link from "next/link";
 import type { Prescription, Finding, Decision, DoseUnit } from "@/lib/schema";
 import FindingCard from "@/components/FindingCard";
@@ -36,7 +36,7 @@ export default function ClinicalReviewPage({ params }: { params: Promise<{ id: s
     if (savedName?.trim()) setReviewerName(savedName.trim());
   }, []);
 
-  const loadPrescription = async () => {
+  const loadPrescription = useCallback(async () => {
     try {
       setLoading(true);
       setError(null);
@@ -60,11 +60,11 @@ export default function ClinicalReviewPage({ params }: { params: Promise<{ id: s
     } finally {
       setLoading(false);
     }
-  };
+  }, [prescriptionId]);
 
   useEffect(() => {
     loadPrescription();
-  }, [prescriptionId]);
+  }, [loadPrescription]);
 
   const handleResolve = async (findingId: string, decision: Decision, reason: string) => {
     const res = await fetch("/api/resolve", {

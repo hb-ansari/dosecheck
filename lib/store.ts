@@ -27,7 +27,6 @@ export interface Store {
 // ---------------------------------------------------------------------------
 // Map DB snake_case row → camelCase Finding
 // ---------------------------------------------------------------------------
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function mapFinding(row: any): Finding {
   return {
     id: row.id,
@@ -54,7 +53,6 @@ function mapFinding(row: any): Finding {
 // ---------------------------------------------------------------------------
 // Map DB row → camelCase Prescription
 // ---------------------------------------------------------------------------
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function mapPrescription(row: any): Prescription {
   return {
     id: row.id,
@@ -112,7 +110,6 @@ export class SupabaseStore implements Store {
 
     if (error) throw mapDbError(error);
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return (data ?? []).map((row: any) => ({
       id: row.id,
       createdAt: row.created_at,
@@ -222,7 +219,6 @@ export class SupabaseStore implements Store {
     const { data, error } = await query;
     if (error) throw mapDbError(error);
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return (data ?? []).map((row: any) => ({
       id: row.id,
       at: row.at,
