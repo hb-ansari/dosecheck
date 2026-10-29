@@ -50,7 +50,7 @@ export default function LandingBenefits() {
         <div className="benefits-intro-grid">
           <div>
             <div className="benefits-badge">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1D68FD" strokeWidth="2.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2D6A4F" strokeWidth="2.5">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
               </svg>
               <span>POWERFUL CLINICAL GUARDRAILS</span>

@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: "DoseCheck - Pre-Dispensing Quality Gate",
   description:
     "DoseCheck is a clinical pre-dispensing quality gate combining deterministic safety checks with Gemma 4 AI contextual review and Urdu patient counseling.",
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

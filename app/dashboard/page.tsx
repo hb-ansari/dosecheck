@@ -216,7 +216,7 @@ function DashboardContent() {
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
             <span className="hms-pulse-dot"></span>
-            <span style={{ fontSize: "11px", fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", color: "#1D68FD" }}>
+            <span style={{ fontSize: "11px", fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", color: "#2D6A4F" }}>
               DOSECHECK QUALITY GATE ACTIVE
             </span>
           </div>
@@ -698,7 +698,7 @@ function DashboardContent() {
                     <td>
                       <Link
                         href={`/review/${p.id}`}
-                        style={{ color: "#1D68FD", fontFamily: "monospace", fontWeight: 700, textDecoration: "none" }}
+                        style={{ color: "#2D6A4F", fontFamily: "monospace", fontWeight: 700, textDecoration: "none" }}
                         title="Open Clinical Review & Safety Gate"
                       >
                         {refCode}

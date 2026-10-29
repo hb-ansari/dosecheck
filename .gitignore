@@ -8,6 +8,9 @@ out/
 # Environment files — NEVER commit these
 .env
 .env.*
+.env*.local
+*.env
+*.env.local
 !.env.example
 
 # IDE & Agent Customizations

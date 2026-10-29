@@ -8,7 +8,7 @@ import NotchNavbar from "@/components/NotchNavbar";
 
 export default function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const isLandingPage = pathname === "/landing";
+  const isLandingPage = pathname === "/" || pathname === "/landing";
 
   if (isLandingPage) {
     return (

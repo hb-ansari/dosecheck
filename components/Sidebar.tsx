@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 
 const navItems = [
   {
-    href: "/landing",
+    href: "/",
     label: "Landing Page",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -14,7 +14,7 @@ const navItems = [
     ),
   },
   {
-    href: "/",
+    href: "/dashboard",
     label: "Safety Dashboard",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -48,7 +48,7 @@ const navItems = [
     ),
   },
   {
-    href: "/?tab=Approvals",
+    href: "/dashboard?tab=Approvals",
     label: "Flagged Interventions",
     badge: 5,
     icon: (
@@ -60,7 +60,7 @@ const navItems = [
     ),
   },
   {
-    href: "/?tab=Controlled+Drugs",
+    href: "/dashboard?tab=Controlled+Drugs",
     label: "Controlled Drugs Gate",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -80,7 +80,7 @@ export default function Sidebar() {
       {/* Brand Header */}
       <div className="hms-brand">
         <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "10px" }}>
-          <div className="hms-logo-box" style={{ background: "linear-gradient(135deg, #1D68FD, #1E40AF)" }}>
+          <div className="hms-logo-box" style={{ background: "linear-gradient(135deg, #2D6A4F, #1B4332)" }}>
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
               <path d="m9 12 2 2 4-4"/>
@@ -88,7 +88,7 @@ export default function Sidebar() {
           </div>
           <div className="hms-brand-info">
             <div className="hms-brand-name" style={{ color: "#FFFFFF", letterSpacing: "-0.01em" }}>DoseCheck</div>
-            <div className="hms-brand-sub" style={{ color: "#60A5FA" }}>Quality Gate Active</div>
+            <div className="hms-brand-sub" style={{ color: "#74C69D" }}>Quality Gate Active</div>
           </div>
         </Link>
       </div>

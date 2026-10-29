@@ -208,7 +208,7 @@ export default function AuditPage() {
                           <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                             <div style={{
                               width: 28, height: 28, borderRadius: "50%",
-                              background: "#1d68fd", color: "#ffffff",
+                              background: "#2D6A4F", color: "#ffffff",
                               display: "flex", alignItems: "center", justifyContent: "center",
                               fontSize: "11px", fontWeight: 700, flexShrink: 0
                             }}>
@@ -236,7 +236,7 @@ export default function AuditPage() {
                         <td>
                           <Link
                             href={`/review/${entry.prescriptionId}`}
-                            style={{ fontSize: "11.5px", fontFamily: "monospace", color: "#1d68fd", textDecoration: "underline", fontWeight: 600 }}
+                            style={{ fontSize: "11.5px", fontFamily: "monospace", color: "#2D6A4F", textDecoration: "underline", fontWeight: 600 }}
                           >
                             {entry.prescriptionId.slice(0, 8)}...
                           </Link>

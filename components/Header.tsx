@@ -96,7 +96,7 @@ export default function Header() {
         <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
           <nav style={{ display: "flex", gap: "0.25rem" }}>
             {[
-              { href: "/", label: "Queue" },
+              { href: "/dashboard", label: "Queue" },
               { href: "/new", label: "New Rx" },
               { href: "/audit", label: "Audit" },
             ].map(({ href, label }) => (
